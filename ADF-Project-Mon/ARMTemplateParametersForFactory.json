@@ -1,0 +1,51 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "ADF-Project-Mon"
+		},
+		"AzureSqlDatabase1_password": {
+			"value": ""
+		},
+		"Duplicate_accountKey": {
+			"value": ""
+		},
+		"Emp_ADLSGen2_Ls_Pq_accountKey": {
+			"value": ""
+		},
+		"Emp_ADLSGen2_ds_accountKey": {
+			"value": ""
+		},
+		"SqlServer1_password": {
+			"value": ""
+		},
+		"AzureSqlDatabase1_properties_typeProperties_server": {
+			"value": "singhankit2637.database.windows.net"
+		},
+		"AzureSqlDatabase1_properties_typeProperties_database": {
+			"value": "emp"
+		},
+		"AzureSqlDatabase1_properties_typeProperties_userName": {
+			"value": "singhankit2637new"
+		},
+		"Duplicate_properties_typeProperties_url": {
+			"value": "https://storeageaccount.dfs.core.windows.net/"
+		},
+		"Emp_ADLSGen2_Ls_Pq_properties_typeProperties_url": {
+			"value": "https://storeageaccount.dfs.core.windows.net/"
+		},
+		"Emp_ADLSGen2_ds_properties_typeProperties_url": {
+			"value": "https://storeageaccount.dfs.core.windows.net/"
+		},
+		"SqlServer1_properties_typeProperties_server": {
+			"value": "LAPTOP-0PK57A6C\\SQLEXPRESS"
+		},
+		"SqlServer1_properties_typeProperties_database": {
+			"value": "employee"
+		},
+		"SqlServer1_properties_typeProperties_userName": {
+			"value": "sa"
+		}
+	}
+}

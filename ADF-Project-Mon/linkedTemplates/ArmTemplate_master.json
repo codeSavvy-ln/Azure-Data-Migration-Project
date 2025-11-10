@@ -1,0 +1,140 @@
+{
+	"$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"type": "string",
+			"metadata": "Data Factory name",
+			"defaultValue": "ADF-Project-Mon"
+		},
+		"AzureSqlDatabase1_password": {
+			"type": "secureString",
+			"metadata": "Secure string for 'password' of 'AzureSqlDatabase1'"
+		},
+		"Duplicate_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'Duplicate'"
+		},
+		"Emp_ADLSGen2_Ls_Pq_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'Emp_ADLSGen2_Ls_Pq'"
+		},
+		"Emp_ADLSGen2_ds_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'Emp_ADLSGen2_ds'"
+		},
+		"SqlServer1_password": {
+			"type": "secureString",
+			"metadata": "Secure string for 'password' of 'SqlServer1'"
+		},
+		"AzureSqlDatabase1_properties_typeProperties_server": {
+			"type": "string",
+			"defaultValue": "singhankit2637.database.windows.net"
+		},
+		"AzureSqlDatabase1_properties_typeProperties_database": {
+			"type": "string",
+			"defaultValue": "emp"
+		},
+		"AzureSqlDatabase1_properties_typeProperties_userName": {
+			"type": "string",
+			"defaultValue": "singhankit2637new"
+		},
+		"Duplicate_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://storeageaccount.dfs.core.windows.net/"
+		},
+		"Emp_ADLSGen2_Ls_Pq_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://storeageaccount.dfs.core.windows.net/"
+		},
+		"Emp_ADLSGen2_ds_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://storeageaccount.dfs.core.windows.net/"
+		},
+		"SqlServer1_properties_typeProperties_server": {
+			"type": "string",
+			"defaultValue": "LAPTOP-0PK57A6C\\SQLEXPRESS"
+		},
+		"SqlServer1_properties_typeProperties_database": {
+			"type": "string",
+			"defaultValue": "employee"
+		},
+		"SqlServer1_properties_typeProperties_userName": {
+			"type": "string",
+			"defaultValue": "sa"
+		},
+		"containerUri": {
+			"type": "string",
+			"metadata": "URI to storage account containing linked ARM templates"
+		},
+		"containerSasToken": {
+			"type": "string",
+			"metadata": "Sas token to storage account containing linked ARM templates"
+		}
+	},
+	"variables": {
+		"factoryId": "[concat('Microsoft.DataFactory/factories/', parameters('factoryName'))]"
+	},
+	"resources": [
+		{
+			"name": "ADF-Project-Mon_ArmTemplate_0",
+			"type": "Microsoft.Resources/deployments",
+			"apiVersion": "2024-03-01",
+			"properties": {
+				"mode": "incremental",
+				"templateLink": {
+					"uri": "[concat(parameters('containerUri'), '/ArmTemplate_0.json', parameters('containerSasToken'))]",
+					"contentVersion": "1.0.0.0"
+				},
+				"parameters": {
+					"factoryName": {
+						"value": "[parameters('factoryName')]"
+					},
+					"AzureSqlDatabase1_password": {
+						"value": "[parameters('AzureSqlDatabase1_password')]"
+					},
+					"Duplicate_accountKey": {
+						"value": "[parameters('Duplicate_accountKey')]"
+					},
+					"Emp_ADLSGen2_Ls_Pq_accountKey": {
+						"value": "[parameters('Emp_ADLSGen2_Ls_Pq_accountKey')]"
+					},
+					"Emp_ADLSGen2_ds_accountKey": {
+						"value": "[parameters('Emp_ADLSGen2_ds_accountKey')]"
+					},
+					"SqlServer1_password": {
+						"value": "[parameters('SqlServer1_password')]"
+					},
+					"AzureSqlDatabase1_properties_typeProperties_server": {
+						"value": "[parameters('AzureSqlDatabase1_properties_typeProperties_server')]"
+					},
+					"AzureSqlDatabase1_properties_typeProperties_database": {
+						"value": "[parameters('AzureSqlDatabase1_properties_typeProperties_database')]"
+					},
+					"AzureSqlDatabase1_properties_typeProperties_userName": {
+						"value": "[parameters('AzureSqlDatabase1_properties_typeProperties_userName')]"
+					},
+					"Duplicate_properties_typeProperties_url": {
+						"value": "[parameters('Duplicate_properties_typeProperties_url')]"
+					},
+					"Emp_ADLSGen2_Ls_Pq_properties_typeProperties_url": {
+						"value": "[parameters('Emp_ADLSGen2_Ls_Pq_properties_typeProperties_url')]"
+					},
+					"Emp_ADLSGen2_ds_properties_typeProperties_url": {
+						"value": "[parameters('Emp_ADLSGen2_ds_properties_typeProperties_url')]"
+					},
+					"SqlServer1_properties_typeProperties_server": {
+						"value": "[parameters('SqlServer1_properties_typeProperties_server')]"
+					},
+					"SqlServer1_properties_typeProperties_database": {
+						"value": "[parameters('SqlServer1_properties_typeProperties_database')]"
+					},
+					"SqlServer1_properties_typeProperties_userName": {
+						"value": "[parameters('SqlServer1_properties_typeProperties_userName')]"
+					}
+				}
+			},
+			"dependsOn": []
+		}
+	]
+}
