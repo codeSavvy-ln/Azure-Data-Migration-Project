@@ -1,0 +1,9 @@
+{
+	"name": "ADF-Project-Mon",
+	"location": "westus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "b009effb-7415-4b4d-9993-9b145cde4e6c",
+		"tenantId": "f6ae339e-64e4-4913-b93a-7714d98f6391"
+	}
+}

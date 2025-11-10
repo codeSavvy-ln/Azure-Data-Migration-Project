@@ -1,0 +1,21 @@
+{
+	"name": "Emp_ADLSGen2_Op_ds_pq",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "Emp_ADLSGen2_Ls_Pq",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Parquet",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"folderPath": "Output",
+				"fileSystem": "bronze"
+			},
+			"compressionCodec": "snappy"
+		},
+		"schema": []
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

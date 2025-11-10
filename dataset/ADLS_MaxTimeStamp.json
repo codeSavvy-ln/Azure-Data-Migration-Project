@@ -1,0 +1,24 @@
+{
+	"name": "ADLS_MaxTimeStamp",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "Emp_ADLSGen2_ds",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": "MaxTimeStamp",
+				"fileSystem": "cloud"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": []
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}
